@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Lachata';
+	src: url('../fonts/lachata.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/lachata.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/lachata.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/lachata.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/lachata.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/lachata.svg#lachata') format('svg'); /* Chrome < 4, Legacy iOS */
+}
