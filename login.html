@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VkusKino — Вход / Регистрация</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Подключаем мягкий закруглённый шрифт Quicksand -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: url('https://raw.githubusercontent.com/Kamila-pdf/vkuskino/main/VkusKino%20Instagram%20Photo.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(0, 0, 40, 0.6);
+        }
+
+        .form-container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 520px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            backdrop-filter: blur(12px);
+            color: white;
+            box-shadow: 0 0 25px rgba(0,0,0,0.5);
+            font-size: 1.1rem;
+        }
+
+        h1.logo {
+            text-align: center;
+            font-size: 3rem;
+            color: #F7924D;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .nav-tabs {
+            border-bottom: none;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .nav-tabs .nav-link {
+            color: white;
+            border: none;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+        }
+        .nav-tabs .nav-link.active {
+            background-color: #F7924D;
+            color: white;
+            border-radius: 6px;
+        }
+
+        .form-control {
+            background: rgba(255, 255, 255, 0.25);
+            border: none;
+            color: white;
+            font-size: 1.1rem;
+            padding: 12px 15px;
+            border-radius: 10px;
+        }
+        .form-control::placeholder {
+            color: #e6e6e6;
+        }
+
+        .forgot-password {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .btn-custom {
+            background-color: #F7924D;
+            color: white;
+            border: none;
+            font-size: 1.1rem;
+            padding: 12px 15px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .btn-custom:hover {
+            background-color: #e07b33;
+        }
+    </style>
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<div class="form-container">
+    <h1 class="logo">VkusKino</h1>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button">Вход</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button">Регистрация</button>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+        <!-- Вход -->
+        <div class="tab-pane fade show active" id="login">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" placeholder="Введите email">
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Пароль</label>
+                    <input type="password" class="form-control" placeholder="Введите пароль">
+                </div>
+                <div class="mb-3 text-end">
+                    <span class="forgot-password">Забыли пароль?</span>
+                </div>
+                <button type="submit" class="btn btn-custom w-100">Войти</button>
+            </form>
+        </div>
+
+        <!-- Регистрация -->
+        <div class="tab-pane fade" id="register">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Имя</label>
+                    <input type="text" class="form-control" placeholder="Ваше имя">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" placeholder="Введите email">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Пароль</label>
+                    <input type="password" class="form-control" placeholder="Придумайте пароль">
+                </div>
+                <button type="submit" class="btn btn-custom w-100">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
